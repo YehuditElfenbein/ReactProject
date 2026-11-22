@@ -1,70 +1,176 @@
-# Getting Started with Create React App
+# 🍳 Recipe Project — ניהול ושיתוף מתכונים
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+פרויקט React בעברית לניהול, חיפוש ושיתוף מתכונים. המשתמש יכול להירשם ולהתחבר, לעיין במתכונים ובקטגוריות, להוסיף מתכונים חדשים, לערוך ולמחוק מתכונים שלו ולהשתמש ברשימת קניות אישית.
 
-## Available Scripts
+> הפרויקט הוא צד לקוח (Frontend). פעילות הנתונים מתבצעת דרך שרת API חיצוני המוגדר בכתובת `http://localhost:8080`.
 
-In the project directory, you can run:
+## ✨ מה אפשר לעשות
 
-### `npm start`
+- הרשמה והתחברות משתמשים.
+- צפייה בדף הבית וברשימת כל המתכונים.
+- סינון מתכונים לפי קטגוריה, זמן הכנה ורמת קושי.
+- צפייה בפרטי מתכון, מרכיבים והוראות ההכנה.
+- הוספה, עריכה ומחיקה של מתכון אישי.
+- צפייה במתכונים של המשתמש המחובר.
+- ניהול קטגוריות.
+- ניהול רשימת קניות: הוספה, הגדלה והקטנה של כמות, ומחיקה.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧰 טכנולוגיות
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
 
-### `npm test`
+- **React 18** — רכיבים וממשק משתמש.
+- **Create React App** — סביבת פיתוח ובנייה.
+- **React Router DOM 6** — ניווט ונתיבי SPA.
+- **Redux** ו־**Redux Thunk** — ניהול מצב אסינכרוני וריכוזי.
+- **React Redux** — חיבור רכיבי React למצב Redux.
+- **Axios** — קריאות HTTP לשרת.
+- **Material UI 5** ו־**Material UI Icons** — רכיבי עיצוב ואייקונים.
+- **Styled Components** ו־**Emotion** — תמיכה בעיצוב מבוסס רכיבים.
+- **React Hook Form** ו־**Yup** — טפסים, אימות והנחיות שגיאה.
+- **SweetAlert / SweetAlert2** — הודעות ודיאלוגים חזותיים.
+- **Testing Library** ו־**Jest** — תשתית לבדיקות רכיבים.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### סטנדרטים וכלים
 
-### `npm run build`
+- JavaScript ES6+
+- CSS מותאם לממשק RTL בעברית
+- npm לניהול תלויות וסקריפטים
+- Git לקוד המקור
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 הפעלת הפרויקט
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### דרישות מוקדמות
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js ותואם npm מותקנים במחשב.
+- שרת API פעיל בכתובת `http://localhost:8080` עם נקודות הקצה שתמיכה בפרויקט.
 
-### `npm run eject`
+### התקנה והפעלה
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. פתחו את התיקייה הראשית של הפרויקט.
+2. התקינו את החבילות:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+או, לשחזור מדויק יותר של תלויות מהקובץ הנעול:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm ci
+```
 
-## Learn More
+3. הפעלו את שרת ה־API בצד 8080.
+4. הפעילו את אפליקציית React:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+האפליקציה תיפתח בדפדפן בכתובת:
 
-### Code Splitting
+```text
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### סקריפטים זמינים
 
-### Analyzing the Bundle Size
+- `npm start` — מפעיל את סביבת הפיתוח.
+- `npm test` — מפעיל את בדיקות Jest במצב watch.
+- `npm run build` — בונה גרסת ייצור לתיקיית `build`.
+- `npm run eject` — חושף את תצורות Create React App; פעולה חד־פעמית ולא ניתנת לביטול.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🗺️ נתיבי האפליקציה
 
-### Making a Progressive Web App
+| נתיב | מסך | תיאור |
+|---|---|---|
+| `/` | דף הבית | דף כניסה כללי |
+| `/homePage` | דף הבית | תוכן האתר לאחר כניסה |
+| `/login` | כניסה | התחברות משתמש קיים |
+| `/sighin` | הרשמה | יצירת משתמש חדש |
+| `/recipes` | כל המתכונים | תצוגה וסינון מתכונים |
+| `/recipeDetailes` | פרטי מתכון | מרכיבים והוראות הכנה |
+| `/addRecipe` | הוספת מתכון | יצירת מתכון חדש |
+| `/editRecipe` | עריכת מתכון | עדכון מתכון קיים |
+| `/myRecipes` | המתכונים שלי | מתכונים שייכים למשתמש המחובר |
+| `/categories` | קטגוריות | ניהול קטגוריות |
+| `/displayList` | רשימת קניות | ניהול מוצרים וכמות |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📁 מבנה הפרויקט
 
-### Advanced Configuration
+```text
+project/
+├── public/                 # קבצים סטטיים ומסמך index.html
+├── images/                 # תמונות רקע ותמונת לוגו
+├── src/
+│   ├── App.js              # נתיבי האפליקציה וטעינת נתוני בסיס
+│   ├── App.css             # עיצוב האפליקציה והרכיבים
+│   ├── index.js            # נקודת כניסה, Router ו־Redux Provider
+│   ├── index.css           # סגנונות גלובליים
+│   ├── components/         # רכיבי ממשק משתמש
+│   │   ├── header.js
+│   │   ├── homePage.js
+│   │   ├── caterory/       # ממשק קטגוריות
+│   │   ├── recipes/        # רשימה, פרטים והוספה/עריכה של מתכונים
+│   │   ├── shopping-list.js/ # רשימת הקניות
+│   │   └── user/           # כניסה והרשמה
+│   ├── server/             # קריאות Axios ותפעול Redux Thunk
+│   │   ├── categoryServer/
+│   │   ├── recipeServer/
+│   │   ├── shoppingListServer/
+│   │   └── userServer/
+│   └── store/
+│       ├── index.js        # יצירת Redux Store
+│       ├── action.js       # שמות פעולות Redux
+│       └── reducer.js      # מצב האפליקציה והמעברים
+├── package.json            # תלויות וסקריפטים
+├── package-lock.json       # נעילת גרסאות תלויות
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔄 ארכיטקטורה זרימת נתונים
 
-### Deployment
+1. `App` טוען בתחילת האפליקציה את רשימות המתכונים והקטגוריות מה־API.
+2. `Redux Store` מרכז את המשתמש המחובר, המתכונים, הקטגוריות ורשימת הקניות.
+3. Thunk actions מבצעים קריאות Axios ומעדכנים את ה־Store לפי תגובת השרת.
+4. רכיבי התצוגה קוראים נתונים מה־Store באמצעות React Redux ומנווטים באמצעות React Router.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+המצב הראשוני כולל:
 
-### `npm run build` fails to minify
+- `user: null`
+- `recipes: []`
+- `categories: []`
+- `toShopping: []`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌐 נקודות API משמשות
+
+הקריאות משתמשות כרגע בכתובות קשיחות ל־`localhost:8080/api`:
+
+- משתמשים: `/api/user/login`, `/api/user/sighin`
+- קטגוריות: `/api/category`
+- מתכונים: `/api/recipe`, `/api/recipe/edit`, `/api/recipe/delete/:id`
+- רשימת קניות: `/api/bay`, `/api/bay/:userId`, `/api/bay/delete/:id`
+
+## 💡 נקודות מענינות ותכונות טכניות
+
+- האפליקציה נבנת כתפריט RTL ומותאמת לתוכן בעברית.
+- סינון המתכונים מתבצע בצד הלקוח לפי מספר תנאים בו־זמנית.
+- טופס הוספת המתכון מאפשר להוסיף רשימות דינמיות של מרכיבים והוראות באמצעות `useFieldArray`.
+- הודעות שגיאה בטופס מתבצעות באמצעות סכמות Yup.
+- רכיבי UI מבוססי Material UI כוללים כפתורים, כרטיסים, חלוניות בחירה ושדות קלט.
+- שינוי המשתמש מנקה את המשתמש ואת רשימת הקניות מ־Redux.
+- כאשר המשתמש לא מחובר, האפליקציה מפנה אותו לדף הבית.
+
+## 🧪 בדיקות
+
+```bash
+npm test
+```
+
+קיימת תשתית ברירת מחדל של Create React App ו־Testing Library. מומלץ להרחיב את הבדיקות ב־`src/**/*.test.js`, במיוחד למסכי כניסה, סינון מתכונים וטפסי הוספה ועריכה.
+
+## 🔧 הערות לפיתוח
+
+- כתובת ה־API נמצאת במספר קבצים תחת `src/server/`; לשימוש בסביבת פיתוח או ייצור מומלץ להעביר אותה למשתנה סביבה כגון `REACT_APP_API_URL` ולהגדיר instance אחד ומרכזי של Axios.
+- תיקיית השרת האמיתי אינה חלק ממבנה Workspace הנוכחי; צריך להפעיל אותה בנפרד כדי שהאפליקציה תוכל לשלוף ולעדכן נתונים.
+- יש לוודא שהשרת מאוזכר CORS לשילוב מול אפליקציית React בדפדפן.
